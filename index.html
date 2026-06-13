@@ -1357,7 +1357,7 @@
   </footer>
 
   <script>
-    /* ================================================================
+/* ================================================================
        PORTFOLIO_DATA — ÚNICO BLOQUE QUE EDITAS CADA SEMANA
        ================================================================
        - "followers", "aum", "riskScore": tarjetas del encabezado
@@ -1370,23 +1370,23 @@
        - "lastUpdated": fecha en texto, como la quieras mostrar
        ================================================================ */
     const PORTFOLIO_DATA = {
-      lastUpdated: "9 de junio de 2026",
+      lastUpdated: "13 de junio de 2026",
       followers: 28,
-      aum: "$64.5K",
+      aum: "$69.6K",
       riskScore: 4,
-      ytd: 17.06,
-      sixMonth: 17.24,
+      ytd: 17.68,
+      sixMonth: 19.99,
       months: [
         { label: "Abril", value: 13.55 },
         { label: "Mayo",  value: 8.03 },
-        { label: "Junio", value: -1.53 }
+        { label: "Junio", value: -1.01 }
       ],
       positions: [
-        { ticker: "SPYG",  name: "SPDR Portfolio S&P 500 Growth ETF",        allocation: 31.31, gain: 50.31 },
-        { ticker: "BRK.B", name: "Berkshire Hathaway Inc.",                  allocation: 27.21, gain: 12.96 },
-        { ticker: "IEMG",  name: "iShares Core MSCI Emerging Markets ETF",   allocation: 20.17, gain: 11.72 },
-        { ticker: "SMH",   name: "VanEck Semiconductor ETF",                 allocation: 14.27, gain: 134.37 },
-        { ticker: "VTI",   name: "Vanguard Total Stock Market ETF",          allocation: 7.04,  gain: 65.63 }
+        { ticker: "SPYG",  name: "SPDR Portfolio S&P 500 Growth ETF",        allocation: 31.31, gain: 54.01 },
+        { ticker: "BRK.B", name: "Berkshire Hathaway Inc.",                  allocation: 27.21, gain: 12.92 },
+        { ticker: "IEMG",  name: "iShares Core MSCI Emerging Markets ETF",   allocation: 20.17, gain: 17.36 },
+        { ticker: "SMH",   name: "VanEck Semiconductor ETF",                 allocation: 14.27, gain: 158.52 },
+        { ticker: "VTI",   name: "Vanguard Total Stock Market ETF",          allocation: 7.04,  gain: 69.53 }
       ]
     };
 
@@ -1450,6 +1450,7 @@
       renderPositions(PORTFOLIO_DATA.positions);
     }
     renderAll();
+
 
     // -------------------------------
     // Contact form -> Formspree (AJAX)
