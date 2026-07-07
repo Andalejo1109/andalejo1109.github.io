@@ -1,37 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!--
-  ============================================================
-  GUÍA RÁPIDA
-  ============================================================
-
-  📅 ACTUALIZACIÓN SEMANAL — lo ÚNICO que tocas cada semana
-     Busca "PORTFOLIO_DATA" dentro del <script>, al final del
-     archivo. Ahí están TODOS los números: posiciones,
-     rendimiento mensual, YTD y los stats del header. El ticker,
-     las tarjetas de meses y las posiciones se generan solos
-     desde ahí. Cambia solo esos valores — nada de HTML ni CSS.
-
-     (eToro no tiene API pública para Popular Investors, así
-     que sigues sacando estos números tú mismo de tu app — pero
-     ahora es lo único manual.)
-
-  ⚙️ CONFIGURACIÓN INICIAL
-  1) FORMULARIO (Formspree) — ya configurado ✅
-     Endpoint: formspree.io/f/xqeoyrdz
-
-  2) FOTO DE PERFIL (opcional)
-     - Si quieres foto real, cambia:
-       <div class="about__avatar" aria-hidden="true">AR</div>
-       por:
-       <img class="about__avatar" src="img/perfil.jpg" alt="Foto de Andrés Rodríguez Lozano">
-
-  3) REDES Y CONTACTO — ya actualizados ✅
-     Revisa de vez en cuando que sigan vigentes
-  ============================================================
-  -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Alejandro Rodríguez Lozano (@Andalejo1109) | Perfil público eToro</title>
@@ -39,13 +8,12 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://andalejo1109.github.io/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="profile" />
   <meta property="og:title" content="Alejandro Rodríguez Lozano (@Andalejo1109) — Perfil público eToro" />
   <meta property="og:description" content="Estrategia, composición de cartera, resultados históricos y formas de contacto." />
   <meta property="og:locale" content="es_CO" />
   <meta property="og:url" content="https://andalejo1109.github.io/" />
-<iframe src="https://optimizador-financiero.streamlit.app/?embed=true" width="100%" height="850" frameborder="0" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></iframe>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📈</text></svg>" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -149,7 +117,7 @@
       padding:5rem 1.5rem;
     }
 
-    #resultados,#estrategia,#sobre-mi,#redes,#contacto{
+    #resultados,#estrategia,#herramienta,#sobre-mi,#redes,#contacto{
       scroll-margin-top:92px;
     }
 
@@ -1019,7 +987,6 @@
 <body id="top">
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- ================= NAV ================= -->
   <nav class="nav" aria-label="Navegación principal">
     <a href="#top" class="nav__brand">
       <span class="dot">●</span>@Andalejo1109
@@ -1028,6 +995,7 @@
     <div class="nav__links">
       <a href="#resultados">Resultados</a>
       <a href="#estrategia">Estrategia</a>
+      <a href="#herramienta" style="color: var(--green);">Simulador</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#contacto">Contacto</a>
     </div>
@@ -1057,6 +1025,7 @@
     <div class="mobile-menu__panel">
       <a href="#resultados">Resultados</a>
       <a href="#estrategia">Estrategia</a>
+      <a href="#herramienta" style="color: var(--green);">Simulador</a>
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#redes">Redes</a>
       <a href="#contacto">Contacto</a>
@@ -1064,7 +1033,6 @@
     </div>
   </div>
 
-  <!-- ================= TICKER (generado desde PORTFOLIO_DATA) ================= -->
   <div class="ticker" aria-hidden="true">
     <div class="ticker__track">
       <div class="ticker__group" data-ticker-group></div>
@@ -1073,7 +1041,6 @@
   </div>
 
   <main id="main">
-    <!-- ================= HERO ================= -->
     <header class="hero">
       <span class="badge reveal">PERFIL PÚBLICO · INVERSIÓN A LARGO PLAZO</span>
       <h1 class="reveal">Alejandro Rodríguez Lozano</h1>
@@ -1109,7 +1076,6 @@
       </div>
     </header>
 
-    <!-- ================= RESULTADOS (generado desde PORTFOLIO_DATA) ================= -->
     <section id="resultados" class="section">
       <span class="eyebrow reveal">Resultados</span>
       <h2 class="reveal">Los números, de forma transparente</h2>
@@ -1137,7 +1103,6 @@
       </p>
     </section>
 
-    <!-- ================= ESTRATEGIA (generado desde PORTFOLIO_DATA) ================= -->
     <section id="estrategia" class="section">
       <span class="eyebrow reveal">Estrategia</span>
       <h2 class="reveal">Cinco posiciones, una idea clara</h2>
@@ -1149,7 +1114,18 @@
       <div class="positions reveal" id="positions-list"></div>
     </section>
 
-    <!-- ================= SOBRE MI ================= -->
+    <section id="herramienta" class="section">
+      <span class="eyebrow reveal">Herramienta Gratuita</span>
+      <h2 class="reveal">Planificador de Deuda a Inversión</h2>
+      <p class="section-intro reveal">
+        Descubre el mes exacto en que podrías quedar libre de deudas usando el método avalancha y proyecta cómo crecería ese flujo de caja al invertirlo en una estrategia diversificada.
+      </p>
+
+      <div class="reveal" style="width: 100%; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow); background: var(--surface);">
+        <iframe src="https://optimizador-financiero.streamlit.app/?embed=true" width="100%" height="850" frameborder="0" style="display: block;"></iframe>
+      </div>
+    </section>
+
     <section id="sobre-mi" class="section">
       <span class="eyebrow reveal">Sobre mí</span>
       <h2 class="reveal">De Colombia para la comunidad de eToro</h2>
@@ -1170,7 +1146,6 @@
       </div>
     </section>
 
-    <!-- ================= REDES ================= -->
     <section id="redes" class="section">
       <span class="eyebrow reveal">Sígueme</span>
       <h2 class="reveal">Redes sociales</h2>
@@ -1222,7 +1197,6 @@
       </div>
     </section>
 
-    <!-- ================= CTA FINAL ================= -->
     <section class="final-cta">
       <div class="final-cta__inner reveal">
         <span class="eyebrow">Perfil público</span>
@@ -1256,7 +1230,6 @@
       </div>
     </section>
 
-    <!-- ================= CONTACTO ================= -->
     <section id="contacto" class="section">
       <span class="eyebrow reveal">Contacto</span>
       <h2 class="reveal">¿Quieres saber más?</h2>
@@ -1346,7 +1319,6 @@
     </section>
   </main>
 
-  <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <p>
       Este sitio tiene fines informativos y no constituye asesoramiento financiero ni una recomendación de inversión.
@@ -1450,7 +1422,6 @@
       renderPositions(PORTFOLIO_DATA.positions);
     }
     renderAll();
-
 
     // -------------------------------
     // Contact form -> Formspree (AJAX)
