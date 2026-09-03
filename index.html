@@ -4,20 +4,26 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>@Andalejo1109 | Popular Investor en eToro</title>
-<meta name="description" content="Copia @Andalejo1109 en eToro. Core ETF a largo plazo. Risk 4, sin apalancamiento, DCA."/>
+<meta name="description" content="Copia @Andalejo1109 en eToro. Core ETF a largo plazo. Risk 4, sin apalancamiento, DCA. Simulador, plantilla y contacto."/>
 <link rel="canonical" href="https://andalejo1109.github.io/"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet"/>
 <style>
 :root{--bg:#0B0E14;--soft:#11151F;--card:#161B27;--line:#262E40;--txt:#ECEFF4;--mut:#8993A8;--go:#2BE8A8;--gold:#FFC857}
 *{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--txt);font-family:Inter,sans-serif;line-height:1.6}
 body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 0,rgba(43,232,168,.08),transparent 30%)}
 a{color:inherit;text-decoration:none}
-.nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;padding:1rem 1.4rem;background:rgba(11,14,20,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
-.brand{font-family:'IBM Plex Mono',monospace;font-weight:600}
+.nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:1rem 1.4rem;background:rgba(11,14,20,.86);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06);z-index:10}
+.brand{font-family:'IBM Plex Mono',monospace;font-weight:600;white-space:nowrap}
 .brand span{color:var(--go)}
-.btn{display:inline-flex;align-items:center;gap:.4rem;background:var(--go);color:#06140F;font-family:'Space Grotesk',sans-serif;font-weight:700;padding:.75rem 1.2rem;border-radius:10px}
+.nav-links{display:flex;align-items:center;gap:1.2rem}
+.nav-links a{color:var(--mut);font-size:.9rem}
+.nav-links a:hover{color:var(--txt)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;background:var(--go);color:#06140F;font-family:'Space Grotesk',sans-serif;font-weight:700;padding:.75rem 1.2rem;border-radius:10px;border:0;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
 .hero{text-align:center;padding:4.2rem 1.2rem 3rem}
 .badge{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:.75rem;letter-spacing:.12em;color:var(--gold);border:1px solid rgba(255,200,87,.3);padding:.4rem .9rem;border-radius:999px;margin-bottom:1rem}
 .kicker{font-family:'IBM Plex Mono',monospace;color:var(--go);letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;margin-bottom:.6rem}
@@ -29,26 +35,51 @@ h1 a:hover{color:var(--go)}
 .stats b{display:block;font-family:'IBM Plex Mono',monospace;font-size:1.5rem}
 .stats span{font-size:.72rem;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
 .wrap{width:min(100%,1000px);margin:0 auto;padding:3.2rem 1.3rem}
+#herramienta,#contacto,#estrategia{scroll-margin-top:88px}
 h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);margin:.3rem 0 1rem}
 .eye{font-family:'IBM Plex Mono',monospace;color:var(--go);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:.7rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .tk{font-family:'IBM Plex Mono',monospace;font-weight:600}
 .nm{color:var(--mut);font-size:.86rem}
 .go{color:var(--go);font-family:'IBM Plex Mono',monospace}
+.sim{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);margin:1.2rem 0}
+.sim iframe{display:block;width:100%;height:850px;border:0;background:#0b0e14}
+.row{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0 1.4rem}
 .about{display:flex;gap:1.4rem;align-items:center;flex-wrap:wrap}
 .about img{width:120px;height:120px;border-radius:50%;object-fit:cover}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem}
+.meta{display:flex;flex-direction:column;gap:.7rem;color:var(--mut)}
+.meta a{color:var(--go)}
+label{display:block;font-size:.82rem;color:var(--mut);margin-bottom:.35rem}
+input,textarea{width:100%;background:#0f141d;border:1px solid var(--line);border-radius:10px;color:var(--txt);padding:.75rem .9rem;margin-bottom:.85rem}
+textarea{min-height:120px;resize:vertical}
+.msg{font-size:.86rem;margin-top:.6rem}
+.msg.ok{color:var(--go)}
+.msg.err{color:#FF5C72}
 footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84rem}
-@media(max-width:700px){.hero{padding-top:3rem}}
+@media(max-width:800px){
+  .nav-links{display:none}
+  .contact{grid-template-columns:1fr}
+  .hero{padding-top:3rem}
+  .sim iframe{height:720px}
+}
 </style>
 </head>
 <body>
 <nav class="nav">
   <a class="brand" href="#top"><span>●</span> @Andalejo1109</a>
+  <div class="nav-links">
+    <a href="#estrategia">Estrategia</a>
+    <a href="#herramienta">Simulador</a>
+    <a href="https://docs.google.com/spreadsheets/d/1DZGNccri5Nb0hlP8INxN4Y2tHEmelKX6g5_Iol_ff5I/export?format=xlsx" target="_blank" rel="noopener">Plantilla</a>
+    <a href="#contacto">Contacto</a>
+  </div>
   <a class="btn" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">Copiar en eToro</a>
 </nav>
+
 <header class="hero" id="top">
   <div class="badge">POPULAR INVESTOR · ETORO · COLOMBIA</div>
-  <p class="kicker">El handle para copiar está aquí, no al final</p>
+  <p class="kicker">Tesis pública · copia en eToro</p>
   <h1><a href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">@Andalejo1109</a></h1>
   <p class="sub">Alejandro Rodríguez Lozano · core ETF · DCA · sin apalancamiento</p>
   <p class="lead">Portafolio público de largo plazo: SPYG, SMH, BRK.B, IEMG y VTI. Risk score 4. Horizonte 5–10 años.</p>
@@ -60,6 +91,7 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
   </div>
   <a class="btn" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">Copiar @Andalejo1109 en eToro</a>
 </header>
+
 <section class="wrap" id="estrategia">
   <div class="eye">Estrategia</div>
   <h2>Cinco posiciones, una idea clara</h2>
@@ -70,6 +102,20 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
   <div class="card"><div><div class="tk">VTI</div><div class="nm">Mercado total USA · 8%</div></div><div class="go">+74.3%</div></div>
   <p class="nm" style="margin-top:1rem">Datos al 3 sep 2026. Contrasta con el perfil vivo. Rentabilidades pasadas no predicen resultados futuros.</p>
 </section>
+
+<section class="wrap" id="herramienta">
+  <div class="eye">Herramienta gratuita</div>
+  <h2>Planificador de deuda a inversión</h2>
+  <p class="lead" style="margin-left:0">Simula cómo pasar de deudas a un plan de inversión. Úsalo antes de copiar a nadie — incluido yo.</p>
+  <div class="row">
+    <a class="btn btn-ghost" href="https://docs.google.com/spreadsheets/d/1DZGNccri5Nb0hlP8INxN4Y2tHEmelKX6g5_Iol_ff5I/export?format=xlsx" target="_blank" rel="noopener">Descargar plantilla de gastos (Excel)</a>
+    <a class="btn btn-ghost" href="https://optimizador-financiero.streamlit.app/" target="_blank" rel="noopener">Abrir simulador en pestaña nueva</a>
+  </div>
+  <div class="sim">
+    <iframe src="https://optimizador-financiero.streamlit.app/?embed=true" title="Simulador financiero" loading="lazy"></iframe>
+  </div>
+</section>
+
 <section class="wrap">
   <div class="eye">Laboratorio</div>
   <h2>El código detrás de la tesis</h2>
@@ -77,6 +123,7 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
   <a class="card" href="https://github.com/Andalejo1109/Retiro-portafolio"><div><div class="tk">Retiro-portafolio</div><div class="nm">Retiro $1.000/mes · Python</div></div><div class="go">Repo →</div></a>
   <a class="card" href="https://github.com/Andalejo1109/Portfolio-management-and-optimization"><div><div class="tk">Portfolio-management</div><div class="nm">DCA vs lump sum · Python</div></div><div class="go">Repo →</div></a>
 </section>
+
 <section class="wrap">
   <div class="eye">Sobre mí</div>
   <h2>De Colombia para la comunidad de eToro</h2>
@@ -85,12 +132,58 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
     <p class="nm">Economista y científico de datos. Popular Investor en eToro como <b style="color:var(--txt)">@Andalejo1109</b>. Pocas posiciones, horizonte largo, sin apalancamiento.<br/><br/>“Compro para quedarme. La paciencia es parte de la estrategia.”</p>
   </div>
 </section>
+
+<section class="wrap" id="contacto">
+  <div class="eye">Contacto</div>
+  <h2>¿Quieres saber más?</h2>
+  <div class="contact">
+    <div class="meta">
+      <div>Correo<br/><a href="mailto:alejo1109@gmail.com">alejo1109@gmail.com</a></div>
+      <div>WhatsApp / tel<br/><a href="https://wa.me/573004872423">+57 300 487 2423</a></div>
+      <div>Colombia · Bogotá</div>
+      <div>Perfil eToro<br/><a href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">etoro.tw/4lkmjxn</a></div>
+    </div>
+    <form id="contact-form" action="https://formspree.io/f/xqeoyrdz" method="POST">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none"/>
+      <input type="hidden" name="_subject" value="Nuevo contacto desde andalejo1109.github.io"/>
+      <label for="name">Nombre</label>
+      <input id="name" name="name" required autocomplete="name"/>
+      <label for="email">Correo</label>
+      <input id="email" name="email" type="email" required autocomplete="email"/>
+      <label for="message">Mensaje</label>
+      <textarea id="message" name="message" placeholder="Cuéntame qué te gustaría saber..."></textarea>
+      <button class="btn" type="submit" style="width:100%">Enviar mensaje</button>
+      <div id="form-msg" class="msg" role="status"></div>
+    </form>
+  </div>
+</section>
+
 <section class="wrap" style="text-align:center">
   <div class="eye">Siguiente paso</div>
   <h2>Copia el perfil, no el titular del día</h2>
   <p class="lead">Mínimo sugerido $500–$1.000. Úsalo como el 70–80% de tu capital (core).</p>
   <a class="btn" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">Copiar @Andalejo1109 en eToro</a>
 </section>
+
 <footer>Informativo, no es asesoría. Invertir implica riesgo de pérdida de capital.<br/>© 2026 Alejandro Rodríguez Lozano · eToro @Andalejo1109</footer>
+<script>
+const form=document.getElementById('contact-form');
+const msg=document.getElementById('form-msg');
+if(form){
+  form.addEventListener('submit',async e=>{
+    e.preventDefault();
+    msg.textContent='Enviando…';
+    msg.className='msg';
+    try{
+      const res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+      if(res.ok){msg.textContent='Mensaje enviado. Te respondo pronto.';msg.className='msg ok';form.reset();}
+      else{msg.textContent='No se pudo enviar. Escríbeme a alejo1109@gmail.com';msg.className='msg err';}
+    }catch(err){
+      msg.textContent='No se pudo enviar. Escríbeme a alejo1109@gmail.com';
+      msg.className='msg err';
+    }
+  });
+}
+</script>
 </body>
 </html>
