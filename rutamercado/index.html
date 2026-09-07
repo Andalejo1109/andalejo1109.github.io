@@ -2,12 +2,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=https://andalejo1109.github.io/rutamercado/app.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f1410" />
   <title>RutaMercado</title>
-  <script>location.replace("./app.html");</script>
+  <style>
+    body { margin: 0; background: #0f1410; color: #e8efe6; font-family: system-ui, sans-serif; padding: 24px; }
+    a { color: #8fd18a; }
+  </style>
 </head>
 <body>
-  <p><a href="./app.html">Abrir RutaMercado</a></p>
+  <p>Cargando RutaMercado…</p>
+  <script>
+    const urls = [
+      "https://cdn.jsdelivr.net/gh/Andalejo1109/rutamercado@main/index.html",
+      "https://raw.githubusercontent.com/Andalejo1109/rutamercado/main/index.html"
+    ];
+    (async () => {
+      for (const url of urls) {
+        try {
+          const res = await fetch(url, { cache: "no-store" });
+          if (!res.ok) continue;
+          const html = await res.text();
+          if (html.includes("RutaMercado")) {
+            document.open();
+            document.write(html);
+            document.close();
+            return;
+          }
+        } catch (e) {}
+      }
+      document.body.innerHTML = '<p>No se pudo cargar la app. Ábrela en <a href="https://github.com/Andalejo1109/rutamercado">github.com/Andalejo1109/rutamercado</a>.</p>';
+    })();
+  </script>
 </body>
 </html>
