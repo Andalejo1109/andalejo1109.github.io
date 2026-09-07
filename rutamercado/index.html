@@ -6,8 +6,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#0f1410" />
   <title>RutaMercado</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
   <style>
     :root { --bg:#0f1410; --bg2:#171e19; --card:#1c241e; --line:#2a352c; --text:#e8efe6; --muted:#9aab9c; --green:#8fd18a; --amber:#e8c36a; --blue:#7eb8c9; --chip:#243028; }
@@ -24,7 +23,7 @@
     .progress { height:6px; background:#243028; border-radius:99px; overflow:hidden; margin-top:12px; }
     .progress > i { display:block; height:100%; background:linear-gradient(90deg,#6cbc6a,#c9e38a); width:0; }
     .tabs { display:flex; gap:6px; overflow-x:auto; padding:12px 0 14px; scrollbar-width:none; }
-    .tabs button { border:1px solid var(--line); background:var(--bg2); color:var(--text); border-radius:999px; padding:8px 12px; font-size:13px; font-weight:600; white-space:nowrap; cursor:pointer; }
+    .tabs button { border:1px solid var(--line); background:var(--bg2); color:var(--text); border-radius:999px; padding:8px 12px; font-size:13px; font-weight:600; white-space:nowrap; }
     .tabs button.on { background:var(--green); color:#102010; border-color:var(--green); }
     .store { background:var(--card); border:1px solid var(--line); border-radius:18px; padding:14px; margin-bottom:12px; }
     .store-head { display:flex; justify-content:space-between; gap:10px; align-items:flex-start; margin-bottom:8px; }
@@ -33,7 +32,7 @@
     .money { font-variant-numeric:tabular-nums; color:var(--amber); font-weight:700; font-size:14px; }
     .item { display:grid; grid-template-columns:28px 1fr auto; gap:8px; align-items:start; padding:10px 0; border-top:1px solid var(--line); }
     .item:first-of-type { border-top:0; }
-    .check { width:22px; height:22px; border-radius:7px; border:2px solid #4a5c4c; background:transparent; cursor:pointer; margin-top:1px; }
+    .check { width:22px; height:22px; border-radius:7px; border:2px solid #4a5c4c; background:transparent; margin-top:1px; }
     .item.done .check { background:var(--green); border-color:var(--green); }
     .item.done .name { text-decoration:line-through; color:var(--muted); }
     .name { font-size:14px; font-weight:600; }
@@ -41,7 +40,7 @@
     .badge { display:inline-block; font-size:10px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; padding:2px 6px; border-radius:999px; background:var(--chip); color:var(--muted); margin-left:4px; }
     .badge.new { background:#1c3338; color:var(--blue); }
     .badge.pend { background:#3a2220; color:#f0b0a6; }
-    .ghost,.primary,.file-btn { border-radius:10px; font-weight:700; font-size:13px; cursor:pointer; padding:8px 12px; }
+    .ghost,.primary,.file-btn { border-radius:10px; font-weight:700; font-size:13px; padding:8px 12px; }
     .ghost { background:transparent; border:1px solid var(--line); color:var(--muted); }
     .primary,.file-btn { background:var(--green); color:#102010; border:0; display:inline-block; }
     .tiny { font-size:11px; padding:4px 7px; }
@@ -70,8 +69,18 @@
     <div class="progress"><i id="bar"></i></div>
   </header>
   <nav class="tabs" id="tabs"></nav>
-  <div id="app"></div>
-  <p class="footer-note">Datos solo en este teléfono · Completitud por sitio</p>
-  <script src="./app.js"></script>
+  <div id="app"><p class="hint">Cargando lista…</p></div>
+  <p class="footer-note">Datos solo en este teléfono</p>
+  <script src="https://cdn.jsdelivr.net/gh/Andalejo1109/rutamercado@main/app.js?v=3"></script>
+  <script>
+    setTimeout(function () {
+      var app = document.getElementById("app");
+      if (app && app.textContent.indexOf("Cargando lista") >= 0) {
+        var s = document.createElement("script");
+        s.src = "https://raw.githack.com/Andalejo1109/rutamercado/main/app.js";
+        document.body.appendChild(s);
+      }
+    }, 2500);
+  </script>
 </body>
 </html>
