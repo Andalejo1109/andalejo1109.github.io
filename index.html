@@ -26,7 +26,7 @@ h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.85rem,6.2vw,3.8rem);
 .sub,.lead,.nm{color:var(--mut)}.lead{max-width:640px;margin:0 auto 2rem}
 .stats{display:flex;justify-content:center;gap:1.8rem;flex-wrap:wrap;margin-bottom:1.8rem}.stats b{display:block;font-family:'IBM Plex Mono',monospace;font-size:1.35rem}.stats span{font-size:.72rem;color:var(--mut);text-transform:uppercase}
 .wrap{width:min(100%,1000px);margin:0 auto;padding:3.2rem 1.3rem}
-#faq,#tesis{scroll-margin-top:88px}
+#faq,#tesis,#contacto{scroll-margin-top:88px}
 h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);margin:.3rem 0 1rem}
 .eye{font-family:'IBM Plex Mono',monospace;color:var(--go);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.1rem 1.2rem;margin:.7rem 0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
@@ -36,6 +36,7 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);mar
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1rem 1.15rem;margin:.55rem 0}
 .faq summary{cursor:pointer;font-family:'Space Grotesk',sans-serif;font-weight:700}.faq p{color:var(--mut);margin-top:.55rem}
 .row{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0}
+.meta a{color:var(--go)}
 footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84rem}footer a{color:var(--go)}
 @media(max-width:800px){.nav-links{display:none}.live-grid{grid-template-columns:1fr 1fr}}
 </style>
@@ -43,7 +44,7 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
 <body>
 <nav class="nav">
   <a class="brand" href="#top"><span>●</span> A. Rodríguez</a>
-  <div class="nav-links"><a href="#tesis">Tesis</a><a href="#faq">FAQ</a><a href="/faq.html">FAQ completa</a></div>
+  <div class="nav-links"><a href="#tesis">Tesis</a><a href="#faq">FAQ</a><a href="#contacto">Contacto</a></div>
   <a class="btn btn-ghost" href="https://github.com/Andalejo1109" target="_blank" rel="noopener">GitHub</a>
 </nav>
 <header class="hero" id="top">
@@ -91,6 +92,11 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
     </details>
   </div>
   <p class="nm" style="margin-top:1rem"><a href="/faq.html" style="color:var(--go)">Ver FAQ completa →</a></p>
+</section>
+<section class="wrap" id="contacto">
+  <div class="eye">Contacto</div>
+  <h2>Escribeme</h2>
+  <p class="nm">alejo1109@gmail.com · <a href="https://wa.me/573004872423">+57 300 487 2423</a> · <a href="https://www.linkedin.com/in/andalejo/">LinkedIn</a></p>
 </section>
 <footer>Informativo. No es asesoría. Invertir implica riesgo de pérdida de capital.<br/>© 2026 Andrés Alejandro Rodríguez Lozano</footer>
 </body>
