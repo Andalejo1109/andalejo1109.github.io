@@ -41,6 +41,14 @@ h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,4vw,2.2rem);mar
 .tk{font-family:'IBM Plex Mono',monospace;font-weight:600}
 .nm{color:var(--mut);font-size:.86rem}
 .go{color:var(--go);font-family:'IBM Plex Mono',monospace}
+.live{display:block;background:linear-gradient(180deg,rgba(43,232,168,.07),var(--card));border:1px solid rgba(43,232,168,.28);border-radius:16px;padding:1.25rem 1.3rem;margin:0 0 1.4rem}
+.live:hover{border-color:rgba(43,232,168,.5)}
+.live-top{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.95rem}
+.live-kicker{font-family:'IBM Plex Mono',monospace;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.live-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.9rem;margin-bottom:1rem}
+.live-grid b{display:block;font-family:'IBM Plex Mono',monospace;font-size:1.28rem;color:var(--txt)}
+.live-grid span{font-size:.72rem;color:var(--mut);letter-spacing:.05em;text-transform:uppercase}
+.live-note{color:var(--mut);font-size:.9rem;margin-bottom:1.05rem;max-width:720px}
 .sim{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--card);margin:1.2rem 0}
 .sim iframe{display:block;width:100%;height:850px;border:0;background:#0b0e14}
 .row{display:flex;gap:.8rem;flex-wrap:wrap;margin:1rem 0 1.4rem}
@@ -62,6 +70,7 @@ footer a{color:var(--go)}
   .contact{grid-template-columns:1fr}
   .hero{padding-top:3rem}
   .sim iframe{height:720px}
+  .live-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -90,7 +99,7 @@ footer a{color:var(--go)}
     <div><b>Risk 4</b><span>Tesis pública</span></div>
   </div>
   <div class="row" style="justify-content:center">
-    <a class="btn" href="#laboratorio">Ver proyectos</a>
+    <a class="btn" href="#tesis">Ver tesis en vivo</a>
     <a class="btn btn-ghost" href="https://www.linkedin.com/in/andalejo/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
 </header>
@@ -118,6 +127,19 @@ footer a{color:var(--go)}
   <div class="eye">Tesis pública</div>
   <h2>Una asignación, unos supuestos, un registro</h2>
   <p class="lead" style="margin-left:0">Core ETF, aportes periódicos, sin apalancamiento. Horizonte 5–10 años. Lo que sigue es la composición publicada al 24 sep 2026; el perfil en vivo puede diferir. Rentabilidades pasadas no predicen resultados futuros.</p>
+  <a class="live" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">
+    <div class="live-top">
+      <div class="live-kicker">Registro en vivo · Popular Investor Elite</div>
+      <div class="nm">eToro @Andalejo1109 · 24 sep 2026</div>
+    </div>
+    <div class="live-grid">
+      <div><b>US$ 89.8 mil</b><span>AUC público</span></div>
+      <div><b>52</b><span>Personas en la tesis</span></div>
+      <div><b>Risk 4</b><span>Sin apalancamiento</span></div>
+    </div>
+    <p class="live-note">La misma asignación se puede contrastar en tiempo real. Quien quiera seguir el método —no un titular— tiene el registro público allí. Esta página documenta el criterio; el perfil, el día a día.</p>
+    <span class="btn">Abrir perfil público →</span>
+  </a>
   <div class="card"><div><div class="tk">SPYG</div><div class="nm">S&P 500 Growth · 31.3%</div></div><div class="go">+60.8%</div></div>
   <div class="card"><div><div class="tk">SMH</div><div class="nm">Semiconductores · 21.6%</div></div><div class="go">+150.7%</div></div>
   <div class="card"><div><div class="tk">BRK.B</div><div class="nm">Berkshire Hathaway · 20.2%</div></div><div class="go">+15.8%</div></div>
@@ -127,7 +149,6 @@ footer a{color:var(--go)}
   <a class="card" href="https://github.com/Andalejo1109/Portfolio-management-and-optimization"><div><div class="tk">DCA vs lump sum</div><div class="nm">Backtest 2020–2025 · Python</div></div><div class="go">Repo →</div></a>
   <a class="card" href="https://github.com/Andalejo1109/Portfolio-distribution"><div><div class="tk">Asignaciones</div><div class="nm">CAGR vs media aritmética · R</div></div><div class="go">Repo →</div></a>
   <a class="card" href="https://github.com/Andalejo1109/Retiro-portafolio"><div><div class="tk">Retiro indexado</div><div class="nm">Riesgo de secuencia · $1.000/mes</div></div><div class="go">Repo →</div></a>
-  <p class="nm" style="margin-top:1.2rem">Registro en vivo de la misma tesis: <a href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener" style="color:var(--go)">eToro @Andalejo1109</a>. Quien quiera seguirla puede hacerlo allí; el punto de esta página es el método, no la copia.</p>
 </section>
 
 <section class="wrap" id="herramienta">
