@@ -12,9 +12,28 @@
 <style>
 body{font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:2rem 1.2rem 4rem;line-height:1.65;color:#111;background:#fafafa}
 h1{font-size:1.7rem}h2{font-size:1.15rem;margin-top:2rem}a{color:#0b5}.mut{color:#555}
+
+.mt-banner{background:#0B0E14;color:#ECEFF4;margin:0 -1.2rem 1.2rem;border-bottom:1px solid #262E40}
+.mt-inner{display:flex;align-items:stretch;min-height:48px;overflow-x:auto;scrollbar-width:thin;-webkit-overflow-scrolling:touch}
+.mt-item{display:flex;flex-direction:column;justify-content:center;padding:7px 13px;border-right:1px solid #262E40;white-space:nowrap;flex-shrink:0;min-width:100px}
+.mt-trm{background:rgba(255,200,87,.12);border-right:2px solid #FFC857;min-width:128px}
+.mt-label{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#8993A8;font-weight:600}
+.mt-trm .mt-label{color:#FFC857}
+.mt-row{display:flex;align-items:baseline;gap:7px;margin-top:1px}
+.mt-price{font-size:14px;font-weight:700;font-variant-numeric:tabular-nums}
+.mt-trm .mt-price{color:#FFC857;font-size:15px}
+.mt-chg{font-size:11px;font-weight:600}.mt-chg.up{color:#2BE8A8}.mt-chg.down{color:#FF5C72}.mt-chg.flat{color:#8993A8}
+.mt-meta{display:flex;align-items:center;gap:10px;padding:7px 12px;margin-left:auto;flex-shrink:0;font-size:11px;color:#8993A8;border-left:1px solid #262E40}
+.mt-meta a{color:#FFC857}
+body{padding-top:0}
 </style>
 </head>
 <body>
+<header class="mt-banner" role="region" aria-label="Cinta macro TRM y mercados">
+  <div class="mt-inner" id="macro-ticker" data-src="/macro/data/macro.json">
+    <div class="mt-item" style="color:#8993A8;padding:10px 14px">Cargando TRM…</div>
+  </div>
+</header>
 <p class="mut"><a href="/">← Andrés Alejandro Rodríguez Lozano</a></p>
 <h1>Preguntas frecuentes sobre el portafolio @Andalejo1109 en eToro</h1>
 <p>Pro Investor, nivel Champion. Informativo. No es asesoría.</p>
@@ -27,5 +46,6 @@ h1{font-size:1.7rem}h2{font-size:1.15rem;margin-top:2rem}a{color:#0b5}.mut{color
 <h2>¿Cómo copiar el portafolio en eToro y cuál es el horizonte recomendado?</h2>
 <p>La meta es que cada persona invierta mes a mes (DCA) y pueda llegar a US$10.000 o más. Se puede empezar con US$200; el aporte mensual puede ser US$100, US$200 o más. US$10.000 es una meta, no un requisito ni una promesa de resultado. Activar «Copiar operaciones abiertas». Horizonte mínimo 3 años. No es asesoría.</p>
 <p class="mut"><a href="https://etoro.tw/4lkmjxn">eToro</a> · <a href="https://bullaware.com/etoro/Andalejo1109">BullAware</a></p>
+<script src="/macro/ticker.js" defer></script>
 </body>
 </html>
