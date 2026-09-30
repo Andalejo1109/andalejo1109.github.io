@@ -2,7 +2,6 @@ name: Refrescar macro.json
 
 on:
   schedule:
-    # Cada 6 h (UTC); Pages es estático — no bloquear ship por eToro
     - cron: "15 */6 * * *"
   workflow_dispatch:
 
@@ -19,15 +18,47 @@ jobs:
           ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
           ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
         run: |
-          python3 macro/fetch_macro.py
+          if [ -f macro/fetch_macro.py ]; then
+            python3 macro/fetch_macro.py || echo "fetch_macro falló; se continúa con snapshot"
+          fi
+      - name: Asegurar boot-banner en home y FAQ
+        run: |
+          python3 << 'PY'
+          from pathlib import Path
+
+          def ensure_script(path: Path) -> bool:
+              text = path.read_text(encoding="utf-8")
+              changed = False
+              if "boot-banner.js" not in text and "</body>" in text:
+                  text = text.replace("</body>", '<script src="/macro/boot-banner.js" defer></script>\n</body>', 1)
+                  changed = True
+              if path.name == "index.html":
+                  if "scroll-margin-top:88px" in text:
+                      text = text.replace("scroll-margin-top:88px", "scroll-margin-top:140px")
+                      changed = True
+                  old = "Informativo. No es asesoría. Invertir implica riesgo de pérdida de capital."
+                  new = old + " TRM = BanRep; USDCOP eToro ≠ TRM. COLCAP panel = proxy CFD eToro."
+                  if old in text and "USDCOP eToro" not in text:
+                      text = text.replace(old, new)
+                      changed = True
+              if changed:
+                  path.write_text(text, encoding="utf-8")
+              return changed
+
+          ch = False
+          for p in (Path("index.html"), Path("faq.html")):
+              if p.exists():
+                  ch = ensure_script(p) or ch
+          print("pages_patched", ch)
+          PY
       - name: Commit si cambió
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add macro/data/macro.json
+          git add macro/data/macro.json index.html faq.html || true
           if git diff --staged --quiet; then
-            echo "Sin cambios en macro.json"
+            echo "Sin cambios"
           else
-            git commit -m "chore(macro): refrescar TRM/cotizaciones"
+            git commit -m "chore(macro): refrescar datos y asegurar cinta en home/FAQ"
             git push
           fi
