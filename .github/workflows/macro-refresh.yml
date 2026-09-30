@@ -1,0 +1,33 @@
+name: Refrescar macro.json
+
+on:
+  schedule:
+    # Cada 6 h (UTC); Pages es estático — no bloquear ship por eToro
+    - cron: "15 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Actualizar TRM (+ eToro si hay secrets)
+        env:
+          ETORO_API_KEY: ${{ secrets.ETORO_API_KEY }}
+          ETORO_USER_KEY: ${{ secrets.ETORO_USER_KEY }}
+        run: |
+          python3 macro/fetch_macro.py
+      - name: Commit si cambió
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add macro/data/macro.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en macro.json"
+          else
+            git commit -m "chore(macro): refrescar TRM/cotizaciones"
+            git push
+          fi
