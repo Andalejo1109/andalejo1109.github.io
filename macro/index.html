@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Panel macro — TRM + mercados</title>
+<style>
+:root{--bg:#0B0E14;--panel:#161B27;--txt:#ECEFF4;--mut:#8993A8;--go:#2BE8A8;--down:#FF5C72;--gold:#FFC857;--line:#262E40}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+.page{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
+h1{font-size:1.35rem;margin:0 0 8px}
+.lead{color:var(--mut);font-size:.92rem;margin:0 0 20px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card.trm{border-color:rgba(255,200,87,.45)}
+.sym{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mut)}
+.trm .sym{color:var(--gold)}
+.price{font-size:1.35rem;font-weight:700;margin-top:10px;font-variant-numeric:tabular-nums}
+.trm .price{color:var(--gold)}
+.chg{margin-top:4px;font-weight:600}.up{color:var(--go)}.down{color:var(--down)}.flat{color:var(--mut)}
+.disc{margin-top:28px;padding:12px 14px;border-radius:8px;background:var(--panel);border:1px solid var(--line);font-size:12px;color:var(--mut);line-height:1.5}
+a{color:var(--gold)}
+</style>
+</head>
+<body>
+<iframe class="macro-ticker" src="ticker.html" title="Cinta macro" style="display:block;width:100%;height:56px;border:0"></iframe>
+<main class="page">
+  <p><a href="/">← Inicio</a></p>
+  <h1>Panel macro — Alejandro Rodríguez (@Andalejo1109)</h1>
+  <p class="lead">TRM BanRep + cotizaciones. Uso educativo; no es asesoría. <strong>USDCOP eToro ≠ TRM</strong>. COLCAP = proxy CFD eToro (Colombia Index), no el índice oficial BVC.</p>
+  <div class="cards" id="cards">Cargando…</div>
+  <div class="disc" id="disc"></div>
+</main>
+<script>
+async function load(){
+  const res=await fetch("data/macro.json?t="+Date.now());
+  const data=await res.json();
+  const el=document.getElementById("cards");
+  const fmt=(n)=>n==null?"—":n.toLocaleString("es-CO",{minimumFractionDigits:2,maximumFractionDigits:2});
+  const chg=(p)=>{if(p==null)return["flat","—"];const c=p>0.0005?"up":p<-0.0005?"down":"flat";return[c,(p>0?"+":"")+p.toFixed(2)+"%"];};
+  let html="";
+  const trm=data.trm||{};
+  html+=`<div class="card trm"><div class="sym">TRM BanRep</div><div class="price">$${fmt(trm.value)}</div><div class="flat">${trm.date||""} · ${trm.source||""}</div></div>`;
+  (data.quotes||[]).forEach(q=>{const [c,t]=chg(q.change_pct_1d);html+=`<div class="card"><div class="sym">${q.symbol}</div><div class="price">${fmt(q.price)}</div><div class="chg ${c}">${t}</div></div>`;});
+  el.innerHTML=html;
+  document.getElementById("disc").textContent="Act. "+((data.updated_at||"").replace("T"," ").slice(0,19))+" COT · Educativo.";
+}
+load();
+</script>
+</body>
+</html>
