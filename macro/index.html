@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Panel macro — TRM + mercados</title>
 <style>
-:root{--bg:#0B0E14;--panel:#161B27;--txt:#ECEFF4;--mut:#8993A8;--go:#2BE8A8;--down:#FF5C72;--gold:#FFC857;--line:#262E40}
+:root{--bg:#0B0E14;--panel:#161B27;--txt:#ECEFF4;--mut:#8993A8;--go:#2BE8A8;--down:#FF5C72;--gold:#FFC857;--line:#262E40;--cyan:#5B9CFF}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
 .page{max-width:1100px;margin:0 auto;padding:24px 16px 48px}
 h1{font-size:1.35rem;margin:0 0 8px}
 .lead{color:var(--mut);font-size:.92rem;margin:0 0 20px}
+.upd{display:inline-block;margin:0 0 16px;padding:8px 12px;border-radius:8px;background:rgba(91,156,255,.12);border:1px solid rgba(91,156,255,.35);color:var(--txt);font-size:.9rem;font-weight:600}
+.upd span{color:var(--cyan);font-weight:700}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-top:16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
 .card.trm{border-color:rgba(255,200,87,.45)}
@@ -29,6 +31,7 @@ a{color:var(--gold)}
   <p><a href="/">← Inicio</a></p>
   <h1>Panel macro — Alejandro Rodríguez (@Andalejo1109)</h1>
   <p class="lead">TRM BanRep + cotizaciones. Uso educativo; no es asesoría. <strong>USDCOP eToro ≠ TRM</strong>. COLCAP = proxy CFD eToro (Colombia Index), no el índice oficial BVC.</p>
+  <div class="upd" id="upd">Actualizado: …</div>
   <div class="cards" id="cards">Cargando…</div>
   <div class="disc" id="disc"></div>
 </main>
@@ -39,12 +42,14 @@ async function load(){
   const el=document.getElementById("cards");
   const fmt=(n)=>n==null?"—":n.toLocaleString("es-CO",{minimumFractionDigits:2,maximumFractionDigits:2});
   const chg=(p)=>{if(p==null)return["flat","—"];const c=p>0.0005?"up":p<-0.0005?"down":"flat";return[c,(p>0?"+":"")+p.toFixed(2)+"%"];};
+  const updLabel=data.updated_at_display||((data.updated_at||"").replace("T"," ").slice(0,19)+" COT");
+  document.getElementById("upd").innerHTML='Actualizado: <span>'+updLabel+"</span>";
   let html="";
   const trm=data.trm||{};
   html+=`<div class="card trm"><div class="sym">TRM BanRep</div><div class="price">$${fmt(trm.value)}</div><div class="flat">${trm.date||""} · ${trm.source||""}</div></div>`;
   (data.quotes||[]).forEach(q=>{const [c,t]=chg(q.change_pct_1d);html+=`<div class="card"><div class="sym">${q.symbol}</div><div class="price">${fmt(q.price)}</div><div class="chg ${c}">${t}</div></div>`;});
   el.innerHTML=html;
-  document.getElementById("disc").textContent="Act. "+((data.updated_at||"").replace("T"," ").slice(0,19))+" COT · Educativo.";
+  document.getElementById("disc").textContent="Actualizado: "+updLabel+" · Educativo; no es asesoría de inversión.";
 }
 load();
 </script>
