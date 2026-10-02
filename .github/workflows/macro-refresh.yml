@@ -2,7 +2,8 @@ name: Refrescar macro.json
 
 on:
   schedule:
-    - cron: "15 */6 * * *"
+    # Once daily at 21:05 UTC = 16:05 America/Bogota (UTC-5, no DST in Colombia)
+    - cron: "5 21 * * *"
   workflow_dispatch:
 
 permissions:
@@ -20,6 +21,9 @@ jobs:
         run: |
           if [ -f macro/fetch_macro.py ]; then
             python3 macro/fetch_macro.py || echo "fetch_macro falló; se continúa con snapshot"
+          else
+            echo "ERROR: falta macro/fetch_macro.py"
+            exit 1
           fi
       - name: Asegurar boot-banner en home y FAQ
         run: |

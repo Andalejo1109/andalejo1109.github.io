@@ -22,8 +22,22 @@
     return sign + p.toFixed(2) + "%";
   }
 
+  function formatUpdated(data) {
+    if (data.updated_at_display) return data.updated_at_display;
+    if (!data.updated_at) return "—";
+    return data.updated_at.replace("T", " ").slice(0, 19) + " COT";
+  }
+
   function render(el, data) {
     const parts = [];
+    const upd = formatUpdated(data);
+    // Timestamp first / prominent in banner
+    parts.push(
+      '<div class="mt-item mt-updated" title="Fecha y hora de última actualización">' +
+        '<span class="mt-label">Actualizado</span>' +
+        '<div class="mt-row"><span class="mt-upd-time">' + upd + "</span></div>" +
+      "</div>"
+    );
     const trm = data.trm || {};
     parts.push(
       '<div class="mt-item mt-trm">' +
@@ -43,11 +57,10 @@
         "</div>"
       );
     });
-    const upd = data.updated_at ? data.updated_at.replace("T", " ").slice(0, 19) : "—";
     parts.push(
       '<div class="mt-meta">' +
         '<a href="/macro/" title="Panel macro completo">Macro</a>' +
-        "<span>Act. " + upd + " COT</span>" +
+        "<span>Actualizado: " + upd + "</span>" +
       "</div>"
     );
     el.innerHTML = parts.join("");
