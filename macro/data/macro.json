@@ -1,1 +1,95 @@
-placeholder
+{
+  "updated_at": "2026-10-02T00:06:17-05:00",
+  "updated_at_display": "2 oct 2026, 12:06 a.m. COT",
+  "timezone": "America/Bogota",
+  "trm": {
+    "value": 3307.73,
+    "date": "2026-10-02",
+    "unidad": "COP",
+    "source": "BanRep/datos.gov.co",
+    "dataset": "32sa-8pi3"
+  },
+  "quotes": [
+    {
+      "symbol": "SPY",
+      "name": "State Street SPDR S&P 500 ETF",
+      "price": 766.43,
+      "change_pct_1d": 0.3142,
+      "source": "eToro",
+      "instrument_id": 3000,
+      "ask": 766.47,
+      "bid": 766.3901
+    },
+    {
+      "symbol": "QQQ",
+      "name": "Invesco QQQ",
+      "price": 745.3301,
+      "change_pct_1d": 0.4407,
+      "source": "eToro",
+      "instrument_id": 3006,
+      "ask": 745.3601,
+      "bid": 745.3
+    },
+    {
+      "symbol": "COLCAP",
+      "name": "Índice Colombia (Colombia Index)",
+      "price": 1139.845,
+      "change_pct_1d": 0.0076,
+      "source": "eToro",
+      "instrument_id": 689,
+      "ask": 1139.91,
+      "bid": 1139.78,
+      "etoro_symbol": "Colombia",
+      "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
+    },
+    {
+      "symbol": "OIL",
+      "name": "Oil (Non Expiry)",
+      "price": 91.66,
+      "change_pct_1d": -0.6247,
+      "source": "eToro",
+      "instrument_id": 17,
+      "ask": 91.68,
+      "bid": 91.64,
+      "note": "CFD petróleo eToro"
+    },
+    {
+      "symbol": "GOLD",
+      "name": "Gold (Non Expiry)",
+      "price": 4184.58,
+      "change_pct_1d": 0.242,
+      "source": "eToro",
+      "instrument_id": 18,
+      "ask": 4184.68,
+      "bid": 4184.48,
+      "note": "CFD oro eToro"
+    },
+    {
+      "symbol": "USDCOP",
+      "name": "USD/COP",
+      "price": 3343.715,
+      "change_pct_1d": 0.3188,
+      "source": "eToro",
+      "instrument_id": 426,
+      "ask": 3346.03,
+      "bid": 3341.4,
+      "note": "FX eToro; no es TRM BanRep"
+    },
+    {
+      "symbol": "VIX",
+      "name": "Cboe Volatility Index",
+      "price": 16.39,
+      "change_pct_1d": 0.306,
+      "source": "Yahoo Finance (público)",
+      "instrument_id": null,
+      "optional": true
+    }
+  ],
+  "notes": [
+    "USDCOP is eToro FX, not official TRM",
+    "OIL y GOLD son CFD eToro sin vencimiento",
+    "COLCAP panel = eToro CFD 'Colombia' (id 689); no es el índice oficial BVC/MSCI",
+    "VIX opcional vía Yahoo Finance",
+    "Educativo; no es asesoría de inversión"
+  ]
+}
