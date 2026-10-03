@@ -111,7 +111,7 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
   <h2>Tesis pública de inversión a largo plazo</h2>
   <p class="lead" style="margin-left:0">Core de ETFs, aportes periódicos (DCA), sin apalancamiento. Composición al 27 sep 2026; el perfil en vivo puede diferir. YTD público <span id="pi-ytd">+20.54%</span>.</p>
   <a class="live" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">
-    <div class="live-kicker" id="pi-kicker">Registro en vivo · Pro Investor, nivel Elite</div>
+    <div class="live-kicker" id="pi-kicker">Registro en vivo · Pro Investor, nivel Champion</div>
     <div class="live-grid">
       <div><b id="pi-aum">US$ 97.3 mil</b><span>AUC público</span></div>
       <div><b id="pi-copiers">60</b><span>Personas en la tesis</span></div>
@@ -226,7 +226,8 @@ if(loadSim&&simBox){
   fetch("/pi/stats.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(d){
     if(!d) return;
     function set(id,v){var el=document.getElementById(id); if(el&&v!=null&&v!=="") el.textContent=v;}
-    set("pi-kicker", d.kicker);
+    var level = (typeof d.aumUsd === "number" && d.aumUsd >= 400000) ? "Elite" : "Champion";
+    set("pi-kicker", "Registro en vivo · Pro Investor, nivel " + level);
     set("pi-aum", d.aumLabel);
     set("pi-copiers", d.copiers!=null?String(d.copiers):null);
     set("pi-risk", d.riskScore!=null?("Risk "+d.riskScore):null);
