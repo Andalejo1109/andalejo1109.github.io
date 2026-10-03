@@ -109,15 +109,16 @@ footer{padding:2rem 1.2rem 3rem;text-align:center;color:var(--mut);font-size:.84
 <section class="wrap" id="tesis">
   <div class="eye">Tesis pública</div>
   <h2>Tesis pública de inversión a largo plazo</h2>
-  <p class="lead" style="margin-left:0">Core de ETFs, aportes periódicos (DCA), sin apalancamiento. Composición al 27 sep 2026; el perfil en vivo puede diferir. YTD público +21.6%.</p>
+  <p class="lead" style="margin-left:0">Core de ETFs, aportes periódicos (DCA), sin apalancamiento. Composición al 27 sep 2026; el perfil en vivo puede diferir. YTD público <span id="pi-ytd">+20.54%</span>.</p>
   <a class="live" href="https://etoro.tw/4lkmjxn" target="_blank" rel="noopener">
-    <div class="live-kicker">Registro en vivo · Pro Investor, nivel Champion</div>
+    <div class="live-kicker" id="pi-kicker">Registro en vivo · Pro Investor, nivel Elite</div>
     <div class="live-grid">
-      <div><b>US$ 91.5 mil</b><span>AUC público</span></div>
-      <div><b>57</b><span>Personas en la tesis</span></div>
-      <div><b>Risk 4</b><span>Sin apalancamiento</span></div>
-      <div><b>1.30</b><span>Sharpe · BullAware</span></div>
+      <div><b id="pi-aum">US$ 97.3 mil</b><span>AUC público</span></div>
+      <div><b id="pi-copiers">60</b><span>Personas en la tesis</span></div>
+      <div><b id="pi-risk">Risk 4</b><span>Sin apalancamiento</span></div>
+      <div><b id="pi-sharpe">1.30</b><span>Sharpe · BullAware</span></div>
     </div>
+    <p class="nm" id="pi-updated" style="margin:.35rem 0 .7rem">Actualizado 2 oct 2026, 8:12 p.m. COT</p>
     <p class="nm">La meta es que cada persona invierta mes a mes (DCA) y pueda llegar a US$10.000 o más. Se puede empezar con US$200. Eso es una meta, no un requisito ni una promesa.</p>
     <span class="btn">Abrir perfil en eToro →</span>
   </a>
@@ -219,6 +220,21 @@ if(loadSim&&simBox){
     simBox.replaceChildren(f);
   },{once:true});
 }
+</script>
+<script>
+(function(){
+  fetch("/pi/stats.json",{cache:"no-cache"}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+    if(!d) return;
+    function set(id,v){var el=document.getElementById(id); if(el&&v!=null&&v!=="") el.textContent=v;}
+    set("pi-kicker", d.kicker);
+    set("pi-aum", d.aumLabel);
+    set("pi-copiers", d.copiers!=null?String(d.copiers):null);
+    set("pi-risk", d.riskScore!=null?("Risk "+d.riskScore):null);
+    set("pi-sharpe", d.sharpeLabel);
+    set("pi-ytd", d.ytdLabel);
+    set("pi-updated", d.updatedLabel?("Actualizado "+d.updatedLabel):null);
+  }).catch(function(){});
+})();
 </script>
 <script src="/macro/boot-banner.js" defer></script>
 </body>
