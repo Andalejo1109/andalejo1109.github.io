@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-02T19:24:26-05:00",
-  "updated_at_display": "2 oct 2026, 7:24 p.m. COT",
+  "updated_at": "2026-10-03T16:06:36-05:00",
+  "updated_at_display": "3 oct 2026, 4:06 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
     "value": 3273.49,
@@ -34,7 +34,7 @@
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
       "price": 1159.8,
-      "change_pct_1d": 1.7581,
+      "change_pct_1d": 0.005,
       "source": "eToro",
       "instrument_id": 689,
       "ask": 1159.86,
@@ -45,23 +45,23 @@
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 90.65,
-      "change_pct_1d": -1.7156,
+      "price": 90.39,
+      "change_pct_1d": -0.5342,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 90.67,
-      "bid": 90.63,
+      "ask": 90.63,
+      "bid": 90.15,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 4143.015,
-      "change_pct_1d": -0.8861,
+      "price": 4140.43,
+      "change_pct_1d": 0.0089,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 4148.64,
-      "bid": 4137.39,
+      "ask": 4144.4,
+      "bid": 4136.46,
       "note": "CFD oro eToro"
     },
     {
