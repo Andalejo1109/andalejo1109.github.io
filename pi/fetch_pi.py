@@ -23,13 +23,8 @@ USERNAME = "Andalejo1109"
 PERIOD = "CurrYear"
 URL = f"https://public-api.etoro.com/api/v2/portfolios/{USERNAME}/rankings?period={PERIOD}"
 BOGOTA = ZoneInfo("America/Bogota")
-LEVELS = {
-    "pi-cadet": "Cadet",
-    "pi-rising-star": "Rising Star",
-    "pi-champion": "Champion",
-    "pi-elite": "Elite",
-    "pi-elite-pro": "Elite Pro",
-}
+# Etiqueta pública fija: Champion por debajo de US$400.000 de AUC.
+# No mapear subType de eToro (pi-elite llega antes de ese umbral).
 
 
 def format_updated_display(dt: datetime) -> str:
@@ -96,7 +91,9 @@ def main() -> int:
     copiers = int(row["copiers"])
     risk = int(row["riskScore"])
     sub = row.get("subType") or ""
-    level = LEVELS.get(sub, sub or "Popular Investor")
+    # eToro subType (p. ej. pi-elite) no es la etiqueta pública.
+    # Champion hasta US$400.000 de AUC; Elite solo a partir de ese monto.
+    level = "Elite" if aum >= 400_000 else "Champion"
     now = datetime.now(BOGOTA)
     sharpe = prev.get("sharpe", 1.3)
     sharpe_label = prev.get("sharpeLabel", "1.30")
