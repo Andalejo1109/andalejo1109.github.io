@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-03T18:44:15-05:00",
-  "updated_at_display": "3 oct 2026, 6:44 p.m. COT",
+  "updated_at": "2026-10-04T16:08:21-05:00",
+  "updated_at_display": "4 oct 2026, 4:08 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
     "value": 3273.49,
@@ -45,23 +45,23 @@
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 90.39,
-      "change_pct_1d": -0.5342,
+      "price": 90.935,
+      "change_pct_1d": 0.6041,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 90.63,
-      "bid": 90.15,
+      "ask": 91.17,
+      "bid": 90.7,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 4140.43,
-      "change_pct_1d": 0.0089,
+      "price": 4139.2,
+      "change_pct_1d": -0.0121,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 4144.4,
-      "bid": 4136.46,
+      "ask": 4142.8,
+      "bid": 4135.6,
       "note": "CFD oro eToro"
     },
     {
