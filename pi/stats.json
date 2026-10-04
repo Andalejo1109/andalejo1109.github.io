@@ -1,7 +1,7 @@
 {
   "username": "Andalejo1109",
-  "updatedAt": "2026-10-03T07:19:45-05:00",
-  "updatedLabel": "3 oct 2026, 7:19 a.m. COT",
+  "updatedAt": "2026-10-04T17:10:00-05:00",
+  "updatedLabel": "4 oct 2026, 5:10 p.m. COT",
   "timezone": "America/Bogota",
   "period": "CurrYear",
   "kicker": "Registro en vivo · Pro Investor, nivel Champion",
@@ -13,8 +13,8 @@
   "copiers": 60,
   "riskScore": 4,
   "lowLeveragePct": 100.0,
-  "ytdGain": 0.2054,
-  "ytdLabel": "+20.54%",
+  "ytdGain": 0.2253,
+  "ytdLabel": "+22.5%",
   "sharpe": 1.3,
   "sharpeLabel": "1.30",
   "sources": {
