@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-05T16:09:42-05:00",
-  "updated_at_display": "5 oct 2026, 4:09 p.m. COT",
+  "updated_at": "2026-10-05T16:19:41-05:00",
+  "updated_at_display": "5 oct 2026, 4:19 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
-    "value": 3273.49,
-    "date": "2026-10-03",
+    "value": 3209.78,
+    "date": "2026-10-06",
     "unidad": "COP",
     "source": "BanRep/datos.gov.co",
     "dataset": "32sa-8pi3"
@@ -13,32 +13,32 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 776.415,
-      "change_pct_1d": 0.2039,
+      "price": 776.205,
+      "change_pct_1d": 0.1768,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 776.42,
-      "bid": 776.41
+      "ask": 776.21,
+      "bid": 776.2
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 756.79,
-      "change_pct_1d": 0.0767,
+      "price": 756.66,
+      "change_pct_1d": 0.0595,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 756.8,
-      "bid": 756.78
+      "ask": 756.67,
+      "bid": 756.65
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 1202.395,
-      "change_pct_1d": 3.6777,
+      "price": 1200.975,
+      "change_pct_1d": 3.5552,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 1202.46,
-      "bid": 1202.33,
+      "ask": 1201.04,
+      "bid": 1200.91,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
