@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-05T12:49:20-05:00",
-  "updated_at_display": "5 oct 2026, 12:49 p.m. COT",
+  "updated_at": "2026-10-05T16:09:42-05:00",
+  "updated_at_display": "5 oct 2026, 4:09 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
     "value": 3273.49,
@@ -13,55 +13,55 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 774.655,
-      "change_pct_1d": 0.5925,
+      "price": 776.415,
+      "change_pct_1d": 0.2039,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 774.66,
-      "bid": 774.65
+      "ask": 776.42,
+      "bid": 776.41
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 755.2,
-      "change_pct_1d": 0.6123,
+      "price": 756.79,
+      "change_pct_1d": 0.0767,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 755.21,
-      "bid": 755.19
+      "ask": 756.8,
+      "bid": 756.78
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 1205.925,
-      "change_pct_1d": 3.6181,
+      "price": 1202.395,
+      "change_pct_1d": 3.6777,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 1205.99,
-      "bid": 1205.86,
+      "ask": 1202.46,
+      "bid": 1202.33,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 89.105,
-      "change_pct_1d": -0.8874,
+      "price": 88.655,
+      "change_pct_1d": -1.6861,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 89.11,
-      "bid": 89.1,
+      "ask": 88.67,
+      "bid": 88.64,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 4132.2,
-      "change_pct_1d": -0.1584,
+      "price": 4140.67,
+      "change_pct_1d": 0.1081,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 4132.3,
-      "bid": 4132.1,
+      "ask": 4140.77,
+      "bid": 4140.57,
       "note": "CFD oro eToro"
     },
     {
@@ -78,8 +78,8 @@
     {
       "symbol": "VIX",
       "name": "Cboe Volatility Index",
-      "price": 15.54,
-      "change_pct_1d": 1.502,
+      "price": 15.52,
+      "change_pct_1d": 1.3717,
       "source": "Yahoo Finance (público)",
       "instrument_id": null,
       "optional": true
