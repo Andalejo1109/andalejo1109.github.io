@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-07T16:13:24-05:00",
-  "updated_at_display": "7 oct 2026, 4:13 p.m. COT",
+  "updated_at": "2026-10-07T16:27:07-05:00",
+  "updated_at_display": "7 oct 2026, 4:27 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
-    "value": 3216.01,
-    "date": "2026-10-07",
+    "value": 3238.88,
+    "date": "2026-10-08",
     "unidad": "COP",
     "source": "BanRep/datos.gov.co",
     "dataset": "32sa-8pi3"
@@ -13,55 +13,55 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 777.425,
+      "price": 777.245,
       "change_pct_1d": 0.0244,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 777.44,
-      "bid": 777.41
+      "ask": 777.25,
+      "bid": 777.24
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 757.27,
+      "price": 757.145,
       "change_pct_1d": -0.062,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 757.28,
-      "bid": 757.26
+      "ask": 757.16,
+      "bid": 757.13
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 1187.28,
+      "price": 1187.145,
       "change_pct_1d": -0.7291,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 1187.34,
-      "bid": 1187.22,
+      "ask": 1187.21,
+      "bid": 1187.08,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 88.485,
+      "price": 88.54,
       "change_pct_1d": -0.9839,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 88.5,
-      "bid": 88.47,
+      "ask": 88.56,
+      "bid": 88.52,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 4106.05,
+      "price": 4102.58,
       "change_pct_1d": -1.3673,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 4106.15,
-      "bid": 4105.95,
+      "ask": 4102.68,
+      "bid": 4102.48,
       "note": "CFD oro eToro"
     },
     {
