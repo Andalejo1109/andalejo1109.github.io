@@ -1,9 +1,8 @@
 name: Refrescar métricas PI
 
 on:
-  schedule:
-    # Sábados 07:00 America/Bogota = 12:00 UTC (Colombia no tiene DST)
-    - cron: "0 12 * * 6"
+  # La actualización de métricas PI la hace solo el bot Chief of Staff.
+  # schedule/cron desactivado; se deja workflow_dispatch para corridas manuales.
   workflow_dispatch:
 
 permissions:
