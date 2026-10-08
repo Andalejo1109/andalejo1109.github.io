@@ -17,12 +17,20 @@
   "ytdLabel": "+22.5%",
   "sharpe": 1.3,
   "sharpeLabel": "1.30",
+  "holdings": [
+    {"ticker": "SPYG", "name": "S&P 500 Growth", "weight": 30.5, "color": "#2BE8A8", "gain": "+62.5%"},
+    {"ticker": "SMH", "name": "Semiconductor ETF", "weight": 21.9, "color": "#FFC857", "gain": "+163.0%"},
+    {"ticker": "BRK.B", "name": "Berkshire Hathaway", "weight": 20.5, "color": "#5B9CFF", "gain": "+14.3%"},
+    {"ticker": "IEMG", "name": "Emergentes ETF", "weight": 20.0, "color": "#A78BFA", "gain": "+11.6%"},
+    {"ticker": "VTI", "name": "Mercado total USA", "weight": 7.2, "color": "#8993A8", "gain": "+74.9%"}
+  ],
   "sources": {
     "aumUsd": "eToro Public API GET /api/v2/portfolios/Andalejo1109/rankings?period=CurrYear aumValue",
     "copiers": "eToro Public API rankings copiers",
     "riskScore": "eToro Public API rankings riskScore",
     "ytdGain": "eToro Public API rankings gain (fracción; CurrYear = YTD)",
     "subType": "eToro Public API rankings subType",
-    "sharpe": "BullAware (no está en eToro). Se conserva el último valor guardado."
+    "sharpe": "BullAware (no está en eToro). Se conserva el último valor guardado.",
+    "holdings": "Pesos manuales o actualizados desde eToro. El donut se regenera desde este array."
   }
 }
