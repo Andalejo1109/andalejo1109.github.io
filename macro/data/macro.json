@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-10-30T16:27:51-05:00",
-  "updated_at_display": "30 oct 2026, 4:27 p.m. COT",
+  "updated_at": "2026-11-02T16:24:41-05:00",
+  "updated_at_display": "2 nov 2026, 4:24 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
-    "value": 3166.91,
-    "date": "2026-10-30",
+    "value": 3182.99,
+    "date": "2026-10-31",
     "unidad": "COP",
     "source": "BanRep/datos.gov.co",
     "dataset": "32sa-8pi3"
@@ -13,55 +13,55 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 755.275,
-      "change_pct_1d": -1.8327,
+      "price": 754.0,
+      "change_pct_1d": -0.2289,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 755.29,
-      "bid": 755.26
+      "ask": 754.01,
+      "bid": 753.99
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 690.145,
-      "change_pct_1d": -3.5242,
+      "price": 684.025,
+      "change_pct_1d": -0.9385,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 690.16,
-      "bid": 690.13
+      "ask": 684.04,
+      "bid": 684.01
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 1133.5,
-      "change_pct_1d": -0.5687,
+      "price": 1105.14,
+      "change_pct_1d": -2.2572,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 1133.56,
-      "bid": 1133.44,
+      "ask": 1105.2,
+      "bid": 1105.08,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 102.36,
-      "change_pct_1d": 0.1115,
+      "price": 95.285,
+      "change_pct_1d": -6.156,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 102.38,
-      "bid": 102.34,
+      "ask": 95.3,
+      "bid": 95.27,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 3875.02,
-      "change_pct_1d": -3.8162,
+      "price": 3945.84,
+      "change_pct_1d": 1.756,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 3877.42,
-      "bid": 3872.62,
+      "ask": 3945.94,
+      "bid": 3945.74,
       "note": "CFD oro eToro"
     },
     {
@@ -78,8 +78,8 @@
     {
       "symbol": "VIX",
       "name": "Cboe Volatility Index",
-      "price": 19.42,
-      "change_pct_1d": 12.907,
+      "price": 21.19,
+      "change_pct_1d": 9.114,
       "source": "Yahoo Finance (público)",
       "instrument_id": null,
       "optional": true
