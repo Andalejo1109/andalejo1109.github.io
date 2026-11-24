@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-23T16:19:27-05:00",
-  "updated_at_display": "23 nov 2026, 4:19 p.m. COT",
+  "updated_at": "2026-11-24T16:20:15-05:00",
+  "updated_at_display": "24 nov 2026, 4:20 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
     "value": 3505.92,
@@ -13,77 +13,76 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 723.02,
-      "change_pct_1d": 4.807120801380103,
+      "price": 717.975,
+      "change_pct_1d": -0.6008666878954324,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 723.07,
-      "bid": 722.97
+      "ask": 718,
+      "bid": 717.95
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 650.62,
-      "change_pct_1d": 6.924151532582791,
+      "price": 637.16,
+      "change_pct_1d": -2.136614288128038,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 650.66,
-      "bid": 650.58
+      "ask": 637.2,
+      "bid": 637.12
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 998.465,
-      "change_pct_1d": 1.7908659394433666,
+      "price": 992.155,
+      "change_pct_1d": -0.8270702597882826,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 998.52,
-      "bid": 998.41,
+      "ask": 992.21,
+      "bid": 992.1,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 80.16,
-      "change_pct_1d": -4.122502691709532,
+      "price": 81.63,
+      "change_pct_1d": 1.8522216674987453,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 80.17,
-      "bid": 80.15,
+      "ask": 81.65,
+      "bid": 81.61,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 3635.65,
-      "change_pct_1d": 2.2969003241491115,
+      "price": 3557.34,
+      "change_pct_1d": -2.1214305761156185,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 3635.75,
-      "bid": 3635.55,
+      "ask": 3557.44,
+      "bid": 3557.24,
       "note": "CFD oro eToro"
     },
     {
       "symbol": "USDCOP",
       "name": "USD/COP",
-      "price": 3542.49,
-      "change_pct_1d": 0.670848679079886,
+      "price": 3635.92,
+      "change_pct_1d": 2.569670033898493,
       "source": "eToro",
       "instrument_id": 426,
-      "ask": 3547.95,
-      "bid": 3537.03,
+      "ask": 3643.92,
+      "bid": 3627.92,
       "note": "FX eToro; no es TRM BanRep"
     },
     {
       "symbol": "VIX",
       "name": "Cboe Volatility Index",
-      "price": 26.62,
-      "change_pct_1d": -25.829,
+      "price": 26.21,
+      "change_pct_1d": -1.541,
       "source": "Yahoo Finance (público)",
       "instrument_id": null,
-      "optional": true,
-      "note": "Variación > 25 % vs. cierre previo: coherente con rebote tras la aversión al riesgo del viernes (SPY y QQQ al alza; confirmado por Yahoo)"
+      "optional": true
     }
   ],
   "notes": [
