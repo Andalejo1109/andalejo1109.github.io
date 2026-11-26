@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-11-25T16:20:08-05:00",
-  "updated_at_display": "25 nov 2026, 4:20 p.m. COT",
+  "updated_at": "2026-11-26T16:27:02-05:00",
+  "updated_at_display": "26 nov 2026, 4:27 p.m. COT",
   "timezone": "America/Bogota",
   "trm": {
-    "value": 3592.03,
-    "date": "2026-11-25",
+    "value": 3630.89,
+    "date": "2026-11-26",
     "unidad": "COP",
     "source": "BanRep/datos.gov.co",
     "dataset": "32sa-8pi3"
@@ -13,55 +13,55 @@
     {
       "symbol": "SPY",
       "name": "State Street SPDR S&P 500 ETF",
-      "price": 716.91,
-      "change_pct_1d": -0.26572803917749077,
+      "price": 720.175,
+      "change_pct_1d": 0.47439653969582485,
       "source": "eToro",
       "instrument_id": 3000,
-      "ask": 716.95,
-      "bid": 716.87
+      "ask": 720.25,
+      "bid": 720.1
     },
     {
       "symbol": "QQQ",
       "name": "Invesco QQQ",
-      "price": 633.505,
-      "change_pct_1d": -0.7255916000626854,
+      "price": 636.755,
+      "change_pct_1d": 0.4385342230214829,
       "source": "eToro",
       "instrument_id": 3006,
-      "ask": 633.54,
-      "bid": 633.47
+      "ask": 636.8,
+      "bid": 636.71
     },
     {
       "symbol": "COLCAP",
       "name": "Índice Colombia (Colombia Index)",
-      "price": 1009.675,
-      "change_pct_1d": 1.7702131820060258,
+      "price": 1008.795,
+      "change_pct_1d": 0.005060372345702769,
       "source": "eToro",
       "instrument_id": 689,
-      "ask": 1009.73,
-      "bid": 1009.62,
+      "ask": 1008.85,
+      "bid": 1008.74,
       "etoro_symbol": "Colombia",
       "note": "CFD eToro símbolo Colombia (Colombia Index); proxy COLCAP — no es el índice BVC oficial"
     },
     {
       "symbol": "OIL",
       "name": "Oil (Non Expiry)",
-      "price": 82.005,
-      "change_pct_1d": 0.5642094934379907,
+      "price": 84.4,
+      "change_pct_1d": 0.3612733993084503,
       "source": "eToro",
       "instrument_id": 17,
-      "ask": 82.01,
-      "bid": 82,
+      "ask": 84.62,
+      "bid": 84.18,
       "note": "CFD petróleo eToro"
     },
     {
       "symbol": "GOLD",
       "name": "Gold (Non Expiry)",
-      "price": 3518.35,
-      "change_pct_1d": -1.0766081641145597,
+      "price": 3575.65,
+      "change_pct_1d": -0.4841387455848137,
       "source": "eToro",
       "instrument_id": 18,
-      "ask": 3518.45,
-      "bid": 3518.25,
+      "ask": 3578.8,
+      "bid": 3572.5,
       "note": "CFD oro eToro"
     },
     {
@@ -78,8 +78,8 @@
     {
       "symbol": "VIX",
       "name": "Cboe Volatility Index",
-      "price": 27.93,
-      "change_pct_1d": 5.945,
+      "price": 26.8,
+      "change_pct_1d": -5.267,
       "source": "Yahoo Finance (público)",
       "instrument_id": null,
       "optional": true
